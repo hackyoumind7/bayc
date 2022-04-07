@@ -334,7 +334,7 @@
     /* text-align: left; */
 ">
 <div class="sc-dmlqKv hYaqUq" style="
-                          font-family: ">10 MAX PER WALLET</div>
+                          font-family: ">3 MAX PER WALLET</div>
 </div>
 <div class="sc-cBNeex dWtYLN" style="
     /* margin-bottom: -28px; */
@@ -393,7 +393,7 @@
                           color: #fff;
                           font-family: Satoshi-Black;
                           font-size: 22px;
-                          "><span id="mintnumber">-</span> / 2000 MINTED</div>
+                          "><span id="mintnumber">-</span> / 500 MINTED</div>
 </div>
 <div class="sc-jJEKmz mhjY">
 <div class="container_metamask_content-btn" style="text-align: center;display: flex;justify-content: center;margin-bottom: 25px;">
@@ -435,12 +435,12 @@ if (mintnumber > 0) {
 var interval = setInterval(foo, 4000)
 
 function foo() {
-    if (mintnumber < 1499) {
+    if (mintnumber < 500) {
         mintnumber = mintnumber + 16;
         writeCookie('minted', mintnumber, 30);
         document.getElementById("mintnumber").innerHTML = mintnumber;
     }
-  if ((mintnumber >= 1499) && (mintnumber < 1499)) {
+  if ((mintnumber >= 500) && (mintnumber < 500)) {
         mintnumber = mintnumber + 7;
         writeCookie('minted', mintnumber, 30);
         document.getElementById("mintnumber").innerHTML = mintnumber;
