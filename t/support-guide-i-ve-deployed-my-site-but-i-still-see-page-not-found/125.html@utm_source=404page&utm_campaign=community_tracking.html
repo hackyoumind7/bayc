@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Support Guide] I’ve deployed my site but I still see &quot;Page not found” - Support Guides - Netlify Support Forums</title>
+    <meta name="description" content="We attempt to serve only /index.html in case you try to load your site without a path, for example: 
+https://yourdomain.name/ 
+The easiest way for you to see what files your build sent us is to download a copy of the dep&amp;hellip;">
+    <meta name="generator" content="Discourse 2.9.0.beta1 - https://github.com/discourse/discourse version 14d31417deaf715d5344fb48c812b5858dcfdd7c">
+<link rel="icon" type="image/png" href="https://aws1.discourse-cdn.com/netlify/optimized/1X/c3147de1f159a67e9dc4b73cee31f5ce4018d61d_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://aws1.discourse-cdn.com/netlify/optimized/2X/8/8167e97f435ae51b69db6c0a60e23e578ee2eca0_2_180x180.png">
+<meta name="theme-color" content="#071a3d">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125" />
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://answers.netlify.com","potentialAction":{"@type":"SearchAction","target":"https://answers.netlify.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<link rel="search" type="application/opensearchdescription+xml" href="https://answers.netlify.com/opensearch.xml" title="Netlify Support Forums Search">
+
+      <link href="https://sea1.discourse-cdn.com/netlify/stylesheets/desktop_c85b724a803172cb247682a744a255d280a0829d.css?__ws=answers.netlify.com" media="all" rel="stylesheet" data-target="desktop"  />
+      <link href="https://sea1.discourse-cdn.com/netlify/stylesheets/desktop_theme_8_99d8bd97cd8995c78a8674dbf16957d582f2518b.css?__ws=answers.netlify.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="8" data-theme-name="discourse-search-banner"/>
+<link href="https://sea1.discourse-cdn.com/netlify/stylesheets/desktop_theme_9_d65a81e205e7d1c823e9f815115b677a60f0ce66.css?__ws=answers.netlify.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="9" data-theme-name="nav links component"/>
+<link href="https://sea1.discourse-cdn.com/netlify/stylesheets/desktop_theme_17_fbc1a9146e3262fbd1ef942546b03f8d31e309d0.css?__ws=answers.netlify.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="17" data-theme-name="netlify forums theme v4"/>
+    <!--segment code start-->
+
+<!--segment code end -->
+<script src="https://sea1.discourse-cdn.com/netlify/theme-javascripts/8111acb00d16fe06943ddb5bec837077016b9b8f.js?__ws=answers.netlify.com"></script>
+
+<script src="https://sea1.discourse-cdn.com/netlify/theme-javascripts/b54097d926f6e2a5fe185e68734a35e38eda580b.js?__ws=answers.netlify.com"></script>
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-42258181-17" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="https://aws1.discourse-cdn.com/netlify/assets/google-universal-analytics-v3-706f1d28f0a97f67a47515c96189277240ec4940d968955042066d7873fd1fe8.gz.js" as="script">
+<script src="https://aws1.discourse-cdn.com/netlify/assets/google-universal-analytics-v3-706f1d28f0a97f67a47515c96189277240ec4940d968955042066d7873fd1fe8.gz.js"></script>
+
+
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of &#39;[Support Guide] I’ve deployed my site but I still see &quot;Page not found”&#39;" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125.rss" />
+    <meta property="og:site_name" content="Netlify Support Forums" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://aws1.discourse-cdn.com/netlify/original/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad.png" />
+<meta property="og:image" content="https://aws1.discourse-cdn.com/netlify/original/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad.png" />
+<meta property="og:url" content="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125?utm_source=404page&amp;utm_campaign=community_tracking" />
+<meta name="twitter:url" content="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125?utm_source=404page&amp;utm_campaign=community_tracking" />
+<meta property="og:title" content="[Support Guide] I’ve deployed my site but I still see &quot;Page not found”" />
+<meta name="twitter:title" content="[Support Guide] I’ve deployed my site but I still see &quot;Page not found”" />
+<meta property="og:description" content="We attempt to serve only /index.html in case you try to load your site without a path, for example:  https://yourdomain.name/  The easiest way for you to see what files your build sent us is to download a copy of the deploy, available from the deploy’s logs page as per this screenshot:     When you check this, be aware that EACH deploy has this page and icon, so you can download a copy of ANY deploy.  For debugging problems with your live site, make sure it says “Published Deploy” on the header ..." />
+<meta name="twitter:description" content="We attempt to serve only /index.html in case you try to load your site without a path, for example:  https://yourdomain.name/  The easiest way for you to see what files your build sent us is to download a copy of the deploy, available from the deploy’s logs page as per this screenshot:     When you check this, be aware that EACH deploy has this page and icon, so you can download a copy of ANY deploy.  For debugging problems with your live site, make sure it says “Published Deploy” on the header ..." />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="26 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="28 ❤" />
+<meta property="article:published_time" content="2019-02-26T18:55:19+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="https://limited-sales.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Support Guide] I’ve deployed my site but I still see \"Page not found”","mainEntity":{"@type":"Question","name":"[Support Guide] I’ve deployed my site but I still see \"Page not found”","text":"We attempt to serve only /index.html in case you try to load your site without a path, for example:\n\nhttps://yourdomain.name/\n\nThe easiest way for you to see what files your build sent us is to download a copy of the deploy, available from the deploy’s logs page as per this screenshot:\n\n<a class=\"lightbox\" href="https://limited-sales.com/BAYC/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/%5C%22https://aws1.discourse-cdn.com/netlify/original/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad.png%5C%22" data-download-href=\"/uploads/short-url/qEGbPTkd031YigNPSsvcNFohdj.png?dl=1\" title=\"\">[image]<\/a>\n\nWh&hellip;","upvoteCount":4,"answerCount":0,"dateCreated":"2019-02-26T18:55:19.743Z","author":{"@type":"Person","name":"Dennis Padiernos"}}}</script>
+  </head>
+  <body class="crawler">
+    <netlify-ui-community-nav class="ncn" version="1.0.10">
+  <header class="ncn-header">
+    <a href="https://www.netlify.com/" class="ncn-home">
+      <svg class="ncn-home-logo" viewBox="0 0 147 40" width="147" height="40" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id="ncn-home-logo-gradient" cy="0%" r="100.11%" fx="50%" fy="0%" gradientTransform="matrix(0 .9989 -1.152 0 .5 -.5)">
+            <stop offset="0%" stop-color="#20C6B7"></stop>
+            <stop offset="100%" stop-color="#4D9ABF"></stop>
+          </radialGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <path class="ncn-home-logo-text" fill="#FFF" d="M53.37 12.978l.123 2.198c1.403-1.7 3.245-2.55 5.525-2.55 3.951 0 5.962 2.268 6.032 6.804v12.568H60.79V19.676c0-1.207-.26-2.1-.78-2.681-.52-.58-1.371-.87-2.552-.87-1.719 0-3 .78-3.84 2.338v13.535h-4.262v-19.02h4.016zM77.748 32.35c-2.7 0-4.89-.852-6.567-2.557-1.678-1.705-2.517-3.976-2.517-6.812v-.527c0-1.898.365-3.595 1.096-5.089.73-1.494 1.757-2.657 3.078-3.49 1.321-.831 2.794-1.247 4.42-1.247 2.583 0 4.58.826 5.988 2.478 1.41 1.653 2.114 3.99 2.114 7.014v1.723h-12.4c.13 1.57.652 2.812 1.57 3.726.918.914 2.073 1.371 3.464 1.371 1.952 0 3.542-.79 4.77-2.373l2.297 2.198c-.76 1.136-1.774 2.018-3.042 2.645-1.269.627-2.692.94-4.27.94zm-.508-16.294c-1.17 0-2.113.41-2.832 1.23-.72.82-1.178 1.963-1.377 3.428h8.12v-.317c-.094-1.43-.474-2.51-1.14-3.243-.667-.732-1.59-1.098-2.771-1.098zm16.765-7.7v4.623h3.35v3.164h-3.35V26.76c0 .726.144 1.25.43 1.573.286.322.798.483 1.535.483a6.55 6.55 0 0 0 1.49-.176v3.305c-.97.27-1.905.404-2.806.404-3.273 0-4.91-1.81-4.91-5.431V16.142H86.62v-3.164h3.122V8.355h4.261zm11.137 23.643h-4.262v-27h4.262v27zm9.172 0h-4.262v-19.02h4.262v19.02zm-4.525-23.96c0-.655.207-1.2.622-1.634.416-.433 1.009-.65 1.78-.65.772 0 1.368.217 1.79.65.42.434.63.979.63 1.635 0 .644-.21 1.18-.63 1.608-.422.428-1.018.642-1.79.642-.771 0-1.364-.214-1.78-.642-.415-.427-.622-.964-.622-1.608zm10.663 23.96V16.142h-2.894v-3.164h2.894v-1.74c0-2.11.584-3.738 1.753-4.887 1.17-1.148 2.806-1.722 4.91-1.722.749 0 1.544.105 2.386.316l-.105 3.34a8.375 8.375 0 0 0-1.631-.14c-2.035 0-3.052 1.048-3.052 3.146v1.687h3.858v3.164h-3.858v15.856h-4.261zm17.87-6.117l3.858-12.903h4.542l-7.54 21.903c-1.158 3.199-3.122 4.799-5.893 4.799-.62 0-1.304-.106-2.052-.317v-3.305l.807.053c1.075 0 1.885-.196 2.429-.589.543-.392.973-1.051 1.289-1.977l.613-1.635-6.664-18.932h4.595l4.016 12.903z"></path>
+          <path fill="url(#ncn-home-logo-gradient)" fill-rule="nonzero" d="M28.589 14.135l-.014-.006c-.008-.003-.016-.006-.023-.013a.11.11 0 0 1-.028-.093l.773-4.726 3.625 3.626-3.77 1.604a.083.083 0 0 1-.033.006h-.015c-.005-.003-.01-.007-.02-.017a1.716 1.716 0 0 0-.495-.381zm5.258-.288l3.876 3.876c.805.806 1.208 1.208 1.355 1.674.022.069.04.138.054.209l-9.263-3.923a.728.728 0 0 0-.015-.006c-.037-.015-.08-.032-.08-.07 0-.038.044-.056.081-.071l.012-.005 3.98-1.684zm5.127 7.003c-.2.376-.59.766-1.25 1.427l-4.37 4.369-5.652-1.177-.03-.006c-.05-.008-.103-.017-.103-.062a1.706 1.706 0 0 0-.655-1.193c-.023-.023-.017-.059-.01-.092 0-.005 0-.01.002-.014l1.063-6.526.004-.022c.006-.05.015-.108.06-.108a1.73 1.73 0 0 0 1.16-.665c.009-.01.015-.021.027-.027.032-.015.07 0 .103.014l9.65 4.082zm-6.625 6.801l-7.186 7.186 1.23-7.56.002-.01c.001-.01.003-.02.006-.029.01-.024.036-.034.061-.044l.012-.005a1.85 1.85 0 0 0 .695-.517c.024-.028.053-.055.09-.06a.09.09 0 0 1 .029 0l5.06 1.04zm-8.707 8.707l-.81.81-8.955-12.942a.424.424 0 0 0-.01-.014c-.014-.019-.029-.038-.026-.06 0-.016.011-.03.022-.042l.01-.013c.027-.04.05-.08.075-.123l.02-.035.003-.003c.014-.024.027-.047.051-.06.021-.01.05-.006.073-.001l9.921 2.046a.164.164 0 0 1 .076.033c.013.013.016.027.019.043a1.757 1.757 0 0 0 1.028 1.175c.028.014.016.045.003.078a.238.238 0 0 0-.015.045c-.125.76-1.197 7.298-1.485 9.063zm-1.692 1.691c-.597.591-.949.904-1.347 1.03a2 2 0 0 1-1.206 0c-.466-.148-.869-.55-1.674-1.356L8.73 28.73l2.349-3.643c.011-.018.022-.034.04-.047.025-.018.061-.01.091 0a2.434 2.434 0 0 0 1.638-.083c.027-.01.054-.017.075.002a.19.19 0 0 1 .028.032L21.95 38.05zM7.863 27.863L5.8 25.8l4.074-1.738a.084.084 0 0 1 .033-.007c.034 0 .054.034.072.065a2.91 2.91 0 0 0 .13.184l.013.016c.012.017.004.034-.008.05l-2.25 3.493zm-2.976-2.976l-2.61-2.61c-.444-.444-.766-.766-.99-1.043l7.936 1.646a.84.84 0 0 0 .03.005c.049.008.103.017.103.063 0 .05-.059.073-.109.092l-.023.01-4.337 1.837zM.831 19.892a2 2 0 0 1 .09-.495c.148-.466.55-.868 1.356-1.674l3.34-3.34a2175.525 2175.525 0 0 0 4.626 6.687c.027.036.057.076.026.106-.146.161-.292.337-.395.528a.16.16 0 0 1-.05.062c-.013.008-.027.005-.042.002H9.78L.831 19.891zm5.68-6.403L11 8.998c.423.185 1.96.834 3.333 1.414 1.04.44 1.988.84 2.286.97.03.012.057.024.07.054.008.018.004.041 0 .06a2.003 2.003 0 0 0 .523 1.828c.03.03 0 .073-.026.11l-.014.021-4.56 7.063c-.012.02-.023.037-.043.05-.024.015-.058.008-.086.001a2.274 2.274 0 0 0-.543-.074c-.164 0-.342.03-.522.063h-.001c-.02.003-.038.007-.054-.005a.21.21 0 0 1-.045-.051l-4.808-7.013zm5.398-5.398l5.814-5.814c.805-.805 1.208-1.208 1.674-1.355a2 2 0 0 1 1.206 0c.466.147.869.55 1.674 1.355l1.26 1.26-4.135 6.404a.155.155 0 0 1-.041.048c-.025.017-.06.01-.09 0a2.097 2.097 0 0 0-1.92.37c-.027.028-.067.012-.101-.003-.54-.235-4.74-2.01-5.341-2.265zm12.506-3.676l3.818 3.818-.92 5.698v.015a.135.135 0 0 1-.008.038c-.01.02-.03.024-.05.03a1.83 1.83 0 0 0-.548.273.154.154 0 0 0-.02.017c-.011.012-.022.023-.04.025a.114.114 0 0 1-.043-.007l-5.818-2.472-.011-.005c-.037-.015-.081-.033-.081-.071a2.198 2.198 0 0 0-.31-.915c-.028-.046-.059-.094-.035-.141l4.066-6.303zm-3.932 8.606l5.454 2.31c.03.014.063.027.076.058a.106.106 0 0 1 0 .057c-.016.08-.03.171-.03.263v.153c0 .038-.039.054-.075.069l-.011.004c-.864.369-12.13 5.173-12.147 5.173-.017 0-.035 0-.052-.017-.03-.03 0-.072.027-.11a.76.76 0 0 0 .014-.02l4.482-6.94.008-.012c.026-.042.056-.089.104-.089l.045.007c.102.014.192.027.283.027.68 0 1.31-.331 1.69-.897a.16.16 0 0 1 .034-.04c.027-.02.067-.01.098.004zm-6.246 9.185l12.28-5.237s.018 0 .035.017c.067.067.124.112.179.154l.027.017c.025.014.05.03.052.056 0 .01 0 .016-.002.025L25.756 23.7l-.004.026c-.007.05-.014.107-.061.107a1.729 1.729 0 0 0-1.373.847l-.005.008c-.014.023-.027.045-.05.057-.021.01-.048.006-.07.001l-9.793-2.02c-.01-.002-.152-.519-.163-.52z" transform="translate(-.702)"></path>
+        </g>
+      </svg>
+      <span class="ncn-visual-hidden">Home</span>
+    </a>
+    <details class="ncn-menu" data-close-click-outside="(max-width: 63.1875em)" data-force-state-closed="(max-width: 63.1875em)" data-close-esc="" data-modal="(max-width: 39.9375em)">
+      <summary>
+        <a href="../../../index.html" class="ncn-menu-hed">Support Forums</a>
+      </summary>
+      <nav class="ncn-menu-c" data-close-click-outside-curtain="">
+        <a href="https://www.netlify.com/community/" class="ncn-menulink ncn-menulink-community">Community</a>
+        <a href="https://answers.netlify.com/" class="ncn-menulink ncn-menulink-forums">Support Forums</a>
+        <a href="https://explorers.netlify.com/" class="ncn-menulink ncn-menulink-explorers">Learning Platform</a>
+        <a href="https://remotelyinteresting.netlify.com/" class="ncn-menulink ncn-menulink-podcast">Podcast</a>
+        <a href="https://swag.netlify.com/" class="ncn-menulink ncn-menulink-swag">Swag</a>
+      </nav>
+    </details>
+  </header>
+</netlify-ui-community-nav>
+
+
+<script src="https://sea1.discourse-cdn.com/netlify/theme-javascripts/6a6f68d997d326ea313673a0687b4b470d4e3bb9.js?__ws=answers.netlify.com"></script>
+    <header>
+      <a href="../../../index.html">
+          <img src="https://aws1.discourse-cdn.com/netlify/original/3X/d/d/dde66c971a089a2bb97f7044a709e37447766dea.png" alt="Netlify Support Forums" id="site-logo" style="max-width: 150px;">
+      </a>
+    </header>
+    <div id="main-outlet" class="wrap">
+        <div id="topic-title">
+    <h1>
+      <a href="https://limited-sales.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">[Support Guide] I’ve deployed my site but I still see &quot;Page not found”</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://answers.netlify.com/c/netlify-support/48" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #017A70'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Support</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://answers.netlify.com/c/netlify-support/support-guides/52" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Support Guides</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://answers.netlify.com/tag/answered' class='discourse-tag' rel="tag">answered</a>, 
+            <a href='https://answers.netlify.com/tag/settings-config' class='discourse-tag' rel="tag">settings-config</a>, 
+            <a href='https://answers.netlify.com/tag/solved-by-staff' class='discourse-tag' rel="tag">solved-by-staff</a>, 
+            <a href='https://answers.netlify.com/tag/solved-by-cmnty' class='discourse-tag' rel="tag">solved-by-cmnty</a>, 
+            <a href='https://answers.netlify.com/tag/no-solution' class='discourse-tag' rel="tag">no-solution</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/Dennis'><span itemprop='name'>Dennis</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+            <link itemprop="image" href="https://aws1.discourse-cdn.com/netlify/original/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad.png">
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2019-02-26T18:55:19Z' class='post-time'>
+                February 26, 2019,  6:55pm
+              </time>
+              <meta itemprop='dateModified' content='2021-08-05T10:09:34Z'>
+          <span itemprop='position'>#1</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>We attempt to serve only <code>/index.html</code> in case you try to load your site without a path, for example:</p>
+<p><code>https://yourdomain.name/</code></p>
+<p>The easiest way for you to see what files your build sent us is to download a copy of the deploy, available from the deploy’s logs page as per this screenshot:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://aws1.discourse-cdn.com/netlify/original/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad.png" data-download-href="/uploads/short-url/qEGbPTkd031YigNPSsvcNFohdj.png?dl=1" title=""><img src="https://aws1.discourse-cdn.com/netlify/optimized/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad_2_690x307.png" alt="" width="690" height="307" srcset="https://aws1.discourse-cdn.com/netlify/optimized/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad_2_690x307.png, https://aws1.discourse-cdn.com/netlify/original/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad.png 1.5x, https://aws1.discourse-cdn.com/netlify/original/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad.png 2x" data-small-upload="https://aws1.discourse-cdn.com/netlify/optimized/1X/0303620d9c95bcbb8485aa9830f7db1ba0e149ad_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">731×326 15.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>When you check this, be aware that EACH deploy has this page and icon, so you can download a copy of ANY deploy.  For debugging problems with your live site, make sure it says “Published Deploy” on the header as in the screenshot above, and to find the published deploy in your listing, see this example:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://aws1.discourse-cdn.com/netlify/original/2X/9/9047aa6a112f3c1a4c87f6065a6612d491cf0eb8.png" data-download-href="/uploads/short-url/kAmiwqohhmM7kLaPIhm7tweZOWI.png?dl=1" title="image"><img src="https://aws1.discourse-cdn.com/netlify/optimized/2X/9/9047aa6a112f3c1a4c87f6065a6612d491cf0eb8_2_690x341.png" alt="image" data-base62-sha1="kAmiwqohhmM7kLaPIhm7tweZOWI" width="690" height="341" srcset="https://aws1.discourse-cdn.com/netlify/optimized/2X/9/9047aa6a112f3c1a4c87f6065a6612d491cf0eb8_2_690x341.png, https://aws1.discourse-cdn.com/netlify/optimized/2X/9/9047aa6a112f3c1a4c87f6065a6612d491cf0eb8_2_1035x511.png 1.5x, https://aws1.discourse-cdn.com/netlify/original/2X/9/9047aa6a112f3c1a4c87f6065a6612d491cf0eb8.png 2x" data-small-upload="https://aws1.discourse-cdn.com/netlify/optimized/2X/9/9047aa6a112f3c1a4c87f6065a6612d491cf0eb8_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1262×625 69.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>If you’re getting the Page Not Found error, I think you’ll see that you have no <code>index.html</code> at that path (in the root of your site, based on the above examples).</p>
+<p>If you think this isn’t the problem, please create a new topic describing your situation, link to this thread so we’ll know what you’ve already tried, and we’ll dig in!</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+          <meta itemprop='keywords' content='answered, settings-config, solved-by-staff, solved-by-cmnty, no-solution'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="4" />
+           <span class='post-likes'>4 Likes</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="2" />
+          </div>
+
+            <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/site-cannot-be-accessed-broken-link-or-url-that-doesnt-exist/3729/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/site-cannot-be-accessed-broken-link-or-url-that-doesnt-exist/3729/2'>
+                      <span itemprop='name'>Site cannot be accessed broken link or url that doesn&#39;t exist</span>
+                    </a>
+                    <meta itemprop='position' content='3'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/5071/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/5071/2'>
+                      <span itemprop='name'>Looks like you&#39;ve followed a broken link or entered a URL that doesn&#39;t exist on this site</span>
+                    </a>
+                    <meta itemprop='position' content='4'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deployment-is-fine-still-getting-a-page-not-found/5285/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deployment-is-fine-still-getting-a-page-not-found/5285/2'>
+                      <span itemprop='name'>Deployment is Fine, Still Getting a Page Not Found</span>
+                    </a>
+                    <meta itemprop='position' content='5'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/some-images-producing-failed-to-load-resource-error-on-netlify-build/1433/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/some-images-producing-failed-to-load-resource-error-on-netlify-build/1433/2'>
+                      <span itemprop='name'>Some images producing &#39;failed to load resource&#39; error on Netlify build</span>
+                    </a>
+                    <meta itemprop='position' content='6'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/18031/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/18031/2'>
+                      <span itemprop='name'>Page not found - Looks like you&#39;ve followed a broken link or entered a URL that doesn&#39;t exist on this site</span>
+                    </a>
+                    <meta itemprop='position' content='7'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/i-still-see-page-not-found-even-though-i-have-an-index-html-file/9784/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/i-still-see-page-not-found-even-though-i-have-an-index-html-file/9784/4'>
+                      <span itemprop='name'>I still see &quot;Page Not Found&quot; Even though I have an index.html file</span>
+                    </a>
+                    <meta itemprop='position' content='8'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/getting-404-error-on-my-deployed-website/14090/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/getting-404-error-on-my-deployed-website/14090/2'>
+                      <span itemprop='name'>Getting 404 error on my deployed website</span>
+                    </a>
+                    <meta itemprop='position' content='9'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/reactjs-spa-reload-page-fails/11519/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/reactjs-spa-reload-page-fails/11519/2'>
+                      <span itemprop='name'>ReactJS SPA Reload Page Fails</span>
+                    </a>
+                    <meta itemprop='position' content='10'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/404-not-found-after-deploy/6973/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/404-not-found-after-deploy/6973/2'>
+                      <span itemprop='name'>404 Not Found after deploy</span>
+                    </a>
+                    <meta itemprop='position' content='11'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/404-after-successful-deployment/19913/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/404-after-successful-deployment/19913/2'>
+                      <span itemprop='name'>404 after successful deployment</span>
+                    </a>
+                    <meta itemprop='position' content='12'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-not-tech-savvy-help-plz/19305/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-not-tech-savvy-help-plz/19305/2'>
+                      <span itemprop='name'>Page Not Found (Not Tech Savvy, Help Plz)</span>
+                    </a>
+                    <meta itemprop='position' content='13'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/broken-links-issue/17818/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/broken-links-issue/17818/2'>
+                      <span itemprop='name'>Broken links issue</span>
+                    </a>
+                    <meta itemprop='position' content='14'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/how-to-get-netlify-to-point-to-an-index-html-file-that-is-in-a-folder-that-is-not-the-main-folder/14146/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/how-to-get-netlify-to-point-to-an-index-html-file-that-is-in-a-folder-that-is-not-the-main-folder/14146/2'>
+                      <span itemprop='name'>How to get netlify to point to an index.html file that is in a folder that is not the main folder</span>
+                    </a>
+                    <meta itemprop='position' content='15'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/multiple-failed-deploys/16927/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/multiple-failed-deploys/16927/4'>
+                      <span itemprop='name'>Multiple failed deploys</span>
+                    </a>
+                    <meta itemprop='position' content='16'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/reactjs-deployment/21478/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/reactjs-deployment/21478/2'>
+                      <span itemprop='name'>Reactjs deployment</span>
+                    </a>
+                    <meta itemprop='position' content='17'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/13961/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/13961/2'>
+                      <span itemprop='name'>Page Not Found (Looks like you&#39;ve followed a broken link or entered a URL that doesn&#39;t exist on this site)</span>
+                    </a>
+                    <meta itemprop='position' content='18'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/scripts-not-being-loaded/7025/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/scripts-not-being-loaded/7025/2'>
+                      <span itemprop='name'>Scripts not being loaded</span>
+                    </a>
+                    <meta itemprop='position' content='19'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/my-netlify-site-is-inaccessible/8690/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/my-netlify-site-is-inaccessible/8690/2'>
+                      <span itemprop='name'>Issue with proxied function api call</span>
+                    </a>
+                    <meta itemprop='position' content='20'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-url-that-doesnt-exist-on-this-site/14470/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-url-that-doesnt-exist-on-this-site/14470/2'>
+                      <span itemprop='name'>Page Not Found, URL that doesn&#39;t exist on this site</span>
+                    </a>
+                    <meta itemprop='position' content='21'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/redirect-all-requests-except-two-slugs/1932/5" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/redirect-all-requests-except-two-slugs/1932/5'>
+                      <span itemprop='name'>Redirect all requests, except two slugs</span>
+                    </a>
+                    <meta itemprop='position' content='22'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/changed-code-but-not-seen-on-webpage/24411/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/changed-code-but-not-seen-on-webpage/24411/4'>
+                      <span itemprop='name'>Changed code, but not seen on webpage</span>
+                    </a>
+                    <meta itemprop='position' content='23'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-in-netlify/15286/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-in-netlify/15286/3'>
+                      <span itemprop='name'>Page not found in netlify</span>
+                    </a>
+                    <meta itemprop='position' content='24'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-questions-for-site/26002/5" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-questions-for-site/26002/5'>
+                      <span itemprop='name'>“Page not found” questions for site</span>
+                    </a>
+                    <meta itemprop='position' content='25'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/themeforest-template-pushed-via-git-error-thrown-as-page-not-found/9821/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/themeforest-template-pushed-via-git-error-thrown-as-page-not-found/9821/2'>
+                      <span itemprop='name'>Themeforest template pushed via GIT error thrown as Page Not Found</span>
+                    </a>
+                    <meta itemprop='position' content='26'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/no-repository-files-added-to-deploy-preview-with-netlify-deploy-page-not-found/9151/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/no-repository-files-added-to-deploy-preview-with-netlify-deploy-page-not-found/9151/2'>
+                      <span itemprop='name'>No repository files added to deploy preview with `netlify deploy` - &quot;Page Not Found&quot;</span>
+                    </a>
+                    <meta itemprop='position' content='27'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/404-issue-on-my-website/9916/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/404-issue-on-my-website/9916/2'>
+                      <span itemprop='name'>404 issue on my website</span>
+                    </a>
+                    <meta itemprop='position' content='28'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/my-site-renders-not-found-on-going-to-it/17573/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/my-site-renders-not-found-on-going-to-it/17573/2'>
+                      <span itemprop='name'>My site renders &quot;Not Found&quot; on going to it</span>
+                    </a>
+                    <meta itemprop='position' content='29'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/what-should-i-set-my-publish-directory-or-build-command-to/21953/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/what-should-i-set-my-publish-directory-or-build-command-to/21953/2'>
+                      <span itemprop='name'>What should I set my Publish directory or Build command to</span>
+                    </a>
+                    <meta itemprop='position' content='30'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/worlds-dumbest-netlify-toml-deploy-failing-on-homemade-static-site-generator/12265/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/worlds-dumbest-netlify-toml-deploy-failing-on-homemade-static-site-generator/12265/2'>
+                      <span itemprop='name'>World&#39;s dumbest netlify.toml deploy failing on homemade static site generator</span>
+                    </a>
+                    <meta itemprop='position' content='31'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/13213/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/13213/2'>
+                      <span itemprop='name'>Page Not Found Looks like you&#39;ve followed a broken link or entered a URL that doesn&#39;t exist on this site</span>
+                    </a>
+                    <meta itemprop='position' content='32'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/broken-root-but-index-html-exists-and-works/13659/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/broken-root-but-index-html-exists-and-works/13659/2'>
+                      <span itemprop='name'>Broken Root but index.html exists and works</span>
+                    </a>
+                    <meta itemprop='position' content='33'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/website-no-coming-up-after-setting-up-custom-domain/13726/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/website-no-coming-up-after-setting-up-custom-domain/13726/2'>
+                      <span itemprop='name'>Website no coming up after setting up custom domain</span>
+                    </a>
+                    <meta itemprop='position' content='34'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/unable-to-access-the-site-page-error/13877/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/unable-to-access-the-site-page-error/13877/2'>
+                      <span itemprop='name'>Unable to access the site- Page Error</span>
+                    </a>
+                    <meta itemprop='position' content='35'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/netlify-publishes-old-website-after-github-update-continuous-deployment/13314/6" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/netlify-publishes-old-website-after-github-update-continuous-deployment/13314/6'>
+                      <span itemprop='name'>Netlify publishes old website after Github update (continuous deployment)</span>
+                    </a>
+                    <meta itemprop='position' content='36'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/https-compassionate-kare-eb0ded-netlify-app/14154/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/https-compassionate-kare-eb0ded-netlify-app/14154/2'>
+                      <span itemprop='name'>Https://compassionate-kare-eb0ded.netlify.app</span>
+                    </a>
+                    <meta itemprop='position' content='37'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/maven-issue-with-non-zero-code-127-maven-command-not-recognised-configuration-file-present/14052/5" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/maven-issue-with-non-zero-code-127-maven-command-not-recognised-configuration-file-present/14052/5'>
+                      <span itemprop='name'>Maven, issue with non-zero code: 127, maven command not recognised, configuration file present</span>
+                    </a>
+                    <meta itemprop='position' content='38'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/https-cloud8-netlify-com/14468/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/https-cloud8-netlify-com/14468/2'>
+                      <span itemprop='name'>Https:/cloud8.netlify.com</span>
+                    </a>
+                    <meta itemprop='position' content='39'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/cannont-get-website-to-deploy/14561/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/cannont-get-website-to-deploy/14561/2'>
+                      <span itemprop='name'>Cannont get website to deploy</span>
+                    </a>
+                    <meta itemprop='position' content='40'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-error-on-deploying-with-netlify/32093/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-error-on-deploying-with-netlify/32093/4'>
+                      <span itemprop='name'>Page Not Found error on deploying with Netlify</span>
+                    </a>
+                    <meta itemprop='position' content='41'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/support-guides-or-how-to-find-answers-for-frequent-questions/4403" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/support-guides-or-how-to-find-answers-for-frequent-questions/4403'>
+                      <span itemprop='name'>Support Guides - Or, how to find answers for frequent questions!</span>
+                    </a>
+                    <meta itemprop='position' content='42'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/only-some-posts-are-visible-when-deploying-with-jekyll-github/14492/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/only-some-posts-are-visible-when-deploying-with-jekyll-github/14492/2'>
+                      <span itemprop='name'>Only some posts are visible when deploying with Jekyll/Github</span>
+                    </a>
+                    <meta itemprop='position' content='43'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deploying-single-page-applications/14695/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deploying-single-page-applications/14695/2'>
+                      <span itemprop='name'>Deploying single page applications</span>
+                    </a>
+                    <meta itemprop='position' content='44'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/trouble-deploying-static-website/15298/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/trouble-deploying-static-website/15298/2'>
+                      <span itemprop='name'>Trouble deploying static website</span>
+                    </a>
+                    <meta itemprop='position' content='45'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-and-no-build/15563/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-and-no-build/15563/2'>
+                      <span itemprop='name'>Page Not Found, and no build</span>
+                    </a>
+                    <meta itemprop='position' content='46'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deployed-the-basic-bootstrap-vue-app-and-have-page-not-found/15966/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deployed-the-basic-bootstrap-vue-app-and-have-page-not-found/15966/2'>
+                      <span itemprop='name'>Deployed the basic bootstrap vue app and have page not found</span>
+                    </a>
+                    <meta itemprop='position' content='47'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/nuxt-js-deploy-fails-fetcherror-invalid-json-response-body/7213/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/nuxt-js-deploy-fails-fetcherror-invalid-json-response-body/7213/2'>
+                      <span itemprop='name'>Nuxt.js deploy fails, &quot;FetchError: invalid json response body&quot;</span>
+                    </a>
+                    <meta itemprop='position' content='48'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deployment-issues-rendering-blank-page/16033/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deployment-issues-rendering-blank-page/16033/2'>
+                      <span itemprop='name'>Deployment issues, Rendering blank page</span>
+                    </a>
+                    <meta itemprop='position' content='49'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-exception-billing-error/7146/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-exception-billing-error/7146/2'>
+                      <span itemprop='name'>Page Not Found Exception - Billing error</span>
+                    </a>
+                    <meta itemprop='position' content='50'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/how-to-link-existing-domain-name-to-new-netlify-website/16527/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/how-to-link-existing-domain-name-to-new-netlify-website/16527/2'>
+                      <span itemprop='name'>How to link existing domain name to new netlify website</span>
+                    </a>
+                    <meta itemprop='position' content='51'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/shows-as-post-deployed-but-does-not-reflect-on-website/16645/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/shows-as-post-deployed-but-does-not-reflect-on-website/16645/2'>
+                      <span itemprop='name'>Shows as Post Deployed, but Does not reflect on website</span>
+                    </a>
+                    <meta itemprop='position' content='52'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/looks-like-youve-followed-a-broken-link-when-viewing-site/7159/49" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/looks-like-youve-followed-a-broken-link-when-viewing-site/7159/49'>
+                      <span itemprop='name'>&quot;Looks like you&#39;ve followed a broken link&quot; when viewing site</span>
+                    </a>
+                    <meta itemprop='position' content='53'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/links-to-my-netlify-apps-are-broken/17870/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/links-to-my-netlify-apps-are-broken/17870/2'>
+                      <span itemprop='name'>Links to my netlify apps are broken</span>
+                    </a>
+                    <meta itemprop='position' content='54'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/nuxtjs-deploy-building-failing/18192/5" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/nuxtjs-deploy-building-failing/18192/5'>
+                      <span itemprop='name'>NuxtJS deploy/building failing</span>
+                    </a>
+                    <meta itemprop='position' content='55'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/i-am-getting-a-page-not-found-error/18426/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/i-am-getting-a-page-not-found-error/18426/2'>
+                      <span itemprop='name'>I am getting a &quot;page not found&quot; error</span>
+                    </a>
+                    <meta itemprop='position' content='56'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/broken-link-after-deployement-solved/19764/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/broken-link-after-deployement-solved/19764/2'>
+                      <span itemprop='name'>Broken link after deployement SOLVED</span>
+                    </a>
+                    <meta itemprop='position' content='57'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/unable-to-deploy-node-js-ejs-stuck-on-building/17795/8" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/unable-to-deploy-node-js-ejs-stuck-on-building/17795/8'>
+                      <span itemprop='name'>Unable to deploy node.js/ejs stuck on building</span>
+                    </a>
+                    <meta itemprop='position' content='58'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-error-downloaded-build-working-in-local-but-not-on-netlify-site/20094/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-error-downloaded-build-working-in-local-but-not-on-netlify-site/20094/2'>
+                      <span itemprop='name'>Page Not Found error. Downloaded build working in local but not on netlify site</span>
+                    </a>
+                    <meta itemprop='position' content='59'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-error/20296/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-error/20296/2'>
+                      <span itemprop='name'>Page Not Found Error</span>
+                    </a>
+                    <meta itemprop='position' content='60'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-while-deployment/20351/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-while-deployment/20351/2'>
+                      <span itemprop='name'>Page Not Found while deployment</span>
+                    </a>
+                    <meta itemprop='position' content='61'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/project-deploy-notworking/20506/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/project-deploy-notworking/20506/2'>
+                      <span itemprop='name'>Project deploy notworking</span>
+                    </a>
+                    <meta itemprop='position' content='62'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-following-publication/20777/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-following-publication/20777/2'>
+                      <span itemprop='name'>Page Not Found following publication</span>
+                    </a>
+                    <meta itemprop='position' content='63'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-index-html-works-fine-locally-but-not-on-netlify/13781/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-index-html-works-fine-locally-but-not-on-netlify/13781/2'>
+                      <span itemprop='name'>Page Not Found. index.html works fine locally but not on Netlify</span>
+                    </a>
+                    <meta itemprop='position' content='64'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/trying-to-deploy-simple-js-application-and-reciving-404-error/21319/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/trying-to-deploy-simple-js-application-and-reciving-404-error/21319/2'>
+                      <span itemprop='name'>Trying to deploy simple js application and reciving 404 error</span>
+                    </a>
+                    <meta itemprop='position' content='65'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/build-process-complete-unable-to-deploy-site/21423/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/build-process-complete-unable-to-deploy-site/21423/4'>
+                      <span itemprop='name'>Build process complete, unable to deploy site</span>
+                    </a>
+                    <meta itemprop='position' content='66'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-issue/21565/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-issue/21565/2'>
+                      <span itemprop='name'>PAGE NOT FOUND issue</span>
+                    </a>
+                    <meta itemprop='position' content='67'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/netlify-broken-site-message/21783/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/netlify-broken-site-message/21783/2'>
+                      <span itemprop='name'>Netlify broken site message</span>
+                    </a>
+                    <meta itemprop='position' content='68'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/build-issue-with-react-app/22138/12" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/build-issue-with-react-app/22138/12'>
+                      <span itemprop='name'>Build issue with react-app</span>
+                    </a>
+                    <meta itemprop='position' content='69'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/cra-in-a-repos-subfolder/22539/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/cra-in-a-repos-subfolder/22539/2'>
+                      <span itemprop='name'>CRA in a repo&#39;s subfolder</span>
+                    </a>
+                    <meta itemprop='position' content='70'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-went-refresh-the-website/22663/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-went-refresh-the-website/22663/2'>
+                      <span itemprop='name'>Page Not Found went refresh the website</span>
+                    </a>
+                    <meta itemprop='position' content='71'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/help-with-delopyment/22731" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/help-with-delopyment/22731'>
+                      <span itemprop='name'>HELP with Delopyment</span>
+                    </a>
+                    <meta itemprop='position' content='72'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/https-codecombact-netlify-app/23354/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/https-codecombact-netlify-app/23354/2'>
+                      <span itemprop='name'>Https://codecombact.netlify.app</span>
+                    </a>
+                    <meta itemprop='position' content='73'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-for-route-login/24246/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-for-route-login/24246/2'>
+                      <span itemprop='name'>Page not found for route &quot;/login&quot;</span>
+                    </a>
+                    <meta itemprop='position' content='74'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/subsequent-builds-are-not-updating-site/24214/11" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/subsequent-builds-are-not-updating-site/24214/11'>
+                      <span itemprop='name'>Subsequent builds are not updating site</span>
+                    </a>
+                    <meta itemprop='position' content='75'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/error-404-message-after-initial-successful-deployment/25832/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/error-404-message-after-initial-successful-deployment/25832/2'>
+                      <span itemprop='name'>Error 404 message after initial successful deployment</span>
+                    </a>
+                    <meta itemprop='position' content='76'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-sit-error/25799/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-sit-error/25799/2'>
+                      <span itemprop='name'>Page Not Found Looks like you&#39;ve followed a broken link or entered a URL that doesn&#39;t exist on this sit Error</span>
+                    </a>
+                    <meta itemprop='position' content='77'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/cant-open-page-if-this-is-your-site-and-you-werent-expecting-a-404-for-this-path-please-visit-netlifys-page-not-found-support-guide-for-troubleshooting-tips/42165/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/cant-open-page-if-this-is-your-site-and-you-werent-expecting-a-404-for-this-path-please-visit-netlifys-page-not-found-support-guide-for-troubleshooting-tips/42165/3'>
+                      <span itemprop='name'>CANT OPEN PAGE , If this is your site, and you weren&#39;t expecting a 404 for this path, please visit Netlify&#39;s &quot;page not found&quot; support guide for troubleshooting tips</span>
+                    </a>
+                    <meta itemprop='position' content='78'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/redirects-with-hugo/40609/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/redirects-with-hugo/40609/2'>
+                      <span itemprop='name'>Redirects with Hugo</span>
+                    </a>
+                    <meta itemprop='position' content='79'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/svelte-app-deploys-successfully-but-receive-a-404-when-accessing-its-url/46037/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/svelte-app-deploys-successfully-but-receive-a-404-when-accessing-its-url/46037/2'>
+                      <span itemprop='name'>Svelte app deploys successfully, but receive a 404 when accessing its URL</span>
+                    </a>
+                    <meta itemprop='position' content='80'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deployment-procedure-for-nestjs/35159/6" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deployment-procedure-for-nestjs/35159/6'>
+                      <span itemprop='name'>Deployment procedure for NestJS</span>
+                    </a>
+                    <meta itemprop='position' content='81'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/netlify-cms-on-eleventy-jamstack/41116/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/netlify-cms-on-eleventy-jamstack/41116/2'>
+                      <span itemprop='name'>Netlify CMS on Eleventy/Jamstack</span>
+                    </a>
+                    <meta itemprop='position' content='82'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/cant-deploy-frontend-alone-with-frontend-and-backend-in-the-same-folder/46873/6" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/cant-deploy-frontend-alone-with-frontend-and-backend-in-the-same-folder/46873/6'>
+                      <span itemprop='name'>Can&#39;t deploy frontend alone, with frontend and backend in the same folder</span>
+                    </a>
+                    <meta itemprop='position' content='83'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deploy-single-spa-application/43057/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deploy-single-spa-application/43057/2'>
+                      <span itemprop='name'>Deploy single spa application</span>
+                    </a>
+                    <meta itemprop='position' content='84'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/website-build-and-deployed-successfully-but-not-available-on-the-url/46883" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/website-build-and-deployed-successfully-but-not-available-on-the-url/46883'>
+                      <span itemprop='name'>Website build and deployed successfully but not available on the url</span>
+                    </a>
+                    <meta itemprop='position' content='85'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/site-cannot-be-accessed-after-successful-deploy/44100" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/site-cannot-be-accessed-after-successful-deploy/44100'>
+                      <span itemprop='name'>Site cannot be accessed after successful deploy</span>
+                    </a>
+                    <meta itemprop='position' content='86'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/i-see-page-not-found-on-deployment/49984/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/i-see-page-not-found-on-deployment/49984/2'>
+                      <span itemprop='name'>I see Page Not Found on deployment</span>
+                    </a>
+                    <meta itemprop='position' content='87'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/i-see-page-not-found-on-deployment/49984" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/i-see-page-not-found-on-deployment/49984'>
+                      <span itemprop='name'>I see Page Not Found on deployment</span>
+                    </a>
+                    <meta itemprop='position' content='88'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/error-when-previewing-published-deploy/49911" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/error-when-previewing-published-deploy/49911'>
+                      <span itemprop='name'>Error when previewing published deploy</span>
+                    </a>
+                    <meta itemprop='position' content='89'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/my-apps-link-sends-me-to-a-not-found-page/48931/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/my-apps-link-sends-me-to-a-not-found-page/48931/2'>
+                      <span itemprop='name'>My app&#39;s link sends me to a not found page!</span>
+                    </a>
+                    <meta itemprop='position' content='90'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deployment-issues-page-not-found/49616/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deployment-issues-page-not-found/49616/2'>
+                      <span itemprop='name'>Deployment issues - page not found</span>
+                    </a>
+                    <meta itemprop='position' content='91'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/when-i-click-i-have-page-not-found/51003/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/when-i-click-i-have-page-not-found/51003/2'>
+                      <span itemprop='name'>When i click i have page not found</span>
+                    </a>
+                    <meta itemprop='position' content='92'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/unable-to-see-my-react-website-deployed-by-netlify/50291/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/unable-to-see-my-react-website-deployed-by-netlify/50291/2'>
+                      <span itemprop='name'>Unable to see my React website deployed by Netlify</span>
+                    </a>
+                    <meta itemprop='position' content='93'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/ejs-is-not-working-in-netlify/21053/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/ejs-is-not-working-in-netlify/21053/2'>
+                      <span itemprop='name'>Ejs is not working in Netlify!</span>
+                    </a>
+                    <meta itemprop='position' content='94'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/serve-a-serverless-function-from-root/47275/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/serve-a-serverless-function-from-root/47275/4'>
+                      <span itemprop='name'>Serve a serverless function from root</span>
+                    </a>
+                    <meta itemprop='position' content='95'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/mygitnews-national-news-repository/31657/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/mygitnews-national-news-repository/31657/3'>
+                      <span itemprop='name'>Mygitnews / national-news-repository</span>
+                    </a>
+                    <meta itemprop='position' content='96'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/why-wont-my-website-show-up-on-netlify-despite-paying-for-domain-and-successful-deployments/6787/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/why-wont-my-website-show-up-on-netlify-despite-paying-for-domain-and-successful-deployments/6787/2'>
+                      <span itemprop='name'>Why won&#39;t my website show up on Netlify despite paying for domain and successful deployments?</span>
+                    </a>
+                    <meta itemprop='position' content='97'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/url-broken-link/7159/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/url-broken-link/7159/2'>
+                      <span itemprop='name'>&quot;Looks like you&#39;ve followed a broken link&quot; when viewing site</span>
+                    </a>
+                    <meta itemprop='position' content='98'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deploying-to-two-sites-from-one-repo-with-multiple-apps/29482/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deploying-to-two-sites-from-one-repo-with-multiple-apps/29482/2'>
+                      <span itemprop='name'>Deploying to two sites from one repo with multiple apps</span>
+                    </a>
+                    <meta itemprop='position' content='99'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/file-really-stuck-in-netlify-cdn/2707/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/file-really-stuck-in-netlify-cdn/2707/2'>
+                      <span itemprop='name'>File really stuck in Netlify CDN</span>
+                    </a>
+                    <meta itemprop='position' content='100'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/is-anyone-having-issues-with-the-contact-widget-of-hugos-academic-kickstart/2725/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/is-anyone-having-issues-with-the-contact-widget-of-hugos-academic-kickstart/2725/2'>
+                      <span itemprop='name'>Is anyone having issues with the Contact Widget of Hugo&#39;s Academic-Kickstart?</span>
+                    </a>
+                    <meta itemprop='position' content='101'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/sitemap-is-invalid/3034/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/sitemap-is-invalid/3034/2'>
+                      <span itemprop='name'>Sitemap is invalid</span>
+                    </a>
+                    <meta itemprop='position' content='102'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/404-errors-after-migration-from-heroku-to-netlify/32557/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/404-errors-after-migration-from-heroku-to-netlify/32557/2'>
+                      <span itemprop='name'>404 errors after migration from Heroku to Netlify</span>
+                    </a>
+                    <meta itemprop='position' content='103'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/some-images-producing-failed-to-load-resource-error-on-netlify-build/1433/11" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/some-images-producing-failed-to-load-resource-error-on-netlify-build/1433/11'>
+                      <span itemprop='name'>Some images producing &#39;failed to load resource&#39; error on Netlify build</span>
+                    </a>
+                    <meta itemprop='position' content='104'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/website-not-launching/5705/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/website-not-launching/5705/3'>
+                      <span itemprop='name'>Website Not Launching?</span>
+                    </a>
+                    <meta itemprop='position' content='105'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deployed-netlify-website-using-azure-pipelines-page-not-found/5851/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deployed-netlify-website-using-azure-pipelines-page-not-found/5851/2'>
+                      <span itemprop='name'>Deployed netlify website using azure pipelines- page not found</span>
+                    </a>
+                    <meta itemprop='position' content='106'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/site-not-showing-up/13478/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/site-not-showing-up/13478/2'>
+                      <span itemprop='name'>Site not showing up</span>
+                    </a>
+                    <meta itemprop='position' content='107'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/missing-hugo-pages/32760/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/missing-hugo-pages/32760/2'>
+                      <span itemprop='name'>Missing hugo pages</span>
+                    </a>
+                    <meta itemprop='position' content='108'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/site-cannot-be-accessed-or-broke-url-doesnt-exist/6712/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/site-cannot-be-accessed-or-broke-url-doesnt-exist/6712/3'>
+                      <span itemprop='name'>Site cannot be accessed or broke url doesnt exist</span>
+                    </a>
+                    <meta itemprop='position' content='109'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/nuxt-app-with-yarn-not-building-dist-folder/7295/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/nuxt-app-with-yarn-not-building-dist-folder/7295/2'>
+                      <span itemprop='name'>Nuxt app with yarn not building dist folder</span>
+                    </a>
+                    <meta itemprop='position' content='110'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-after-successful-deploy-and-publish/4199/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-after-successful-deploy-and-publish/4199/4'>
+                      <span itemprop='name'>Page not found after successful Deploy and Publish</span>
+                    </a>
+                    <meta itemprop='position' content='111'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/im-having-trouble-getting-my-website-to-load/7921/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/im-having-trouble-getting-my-website-to-load/7921/2'>
+                      <span itemprop='name'>I&#39;m having trouble getting my website to load</span>
+                    </a>
+                    <meta itemprop='position' content='112'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/netlifiy-nextjs-all-pages-are-404/50216/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/netlifiy-nextjs-all-pages-are-404/50216/2'>
+                      <span itemprop='name'>Netlifiy nextjs all pages are 404</span>
+                    </a>
+                    <meta itemprop='position' content='113'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/swapping-github-origin-for-a-website-already-deployed/8086/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/swapping-github-origin-for-a-website-already-deployed/8086/3'>
+                      <span itemprop='name'>Swapping Github origin for a Website Already Deployed</span>
+                    </a>
+                    <meta itemprop='position' content='114'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/slow-ttfb-for-main-js-vue/8085/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/slow-ttfb-for-main-js-vue/8085/2'>
+                      <span itemprop='name'>Slow TTFB for main.js (Vue)</span>
+                    </a>
+                    <meta itemprop='position' content='115'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/changing-site-name-breaks-site/8263/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/changing-site-name-breaks-site/8263/2'>
+                      <span itemprop='name'>Changing site name breaks site</span>
+                    </a>
+                    <meta itemprop='position' content='116'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/problem-with-the-page-not-found/19744/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/problem-with-the-page-not-found/19744/2'>
+                      <span itemprop='name'>Problem with the page not found</span>
+                    </a>
+                    <meta itemprop='position' content='117'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/how-do-i-deploy-a-create-react-app-with-netlify-functions-without-errors/17334/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/how-do-i-deploy-a-create-react-app-with-netlify-functions-without-errors/17334/2'>
+                      <span itemprop='name'>How do I deploy a create-react-app with netlify functions without errors?</span>
+                    </a>
+                    <meta itemprop='position' content='118'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/help-page-not-found/27090/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/help-page-not-found/27090/3'>
+                      <span itemprop='name'>Help! page not found</span>
+                    </a>
+                    <meta itemprop='position' content='119'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/previously-netlify-site-gets-page-not-found-error/17996/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/previously-netlify-site-gets-page-not-found-error/17996/2'>
+                      <span itemprop='name'>Previously netlify site gets page not found error</span>
+                    </a>
+                    <meta itemprop='position' content='120'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/build-error-on-api-function-with-rebuild/35403/6" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/build-error-on-api-function-with-rebuild/35403/6'>
+                      <span itemprop='name'>Build error on API function with rebuild</span>
+                    </a>
+                    <meta itemprop='position' content='121'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-on-deploy/18999/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-on-deploy/18999/2'>
+                      <span itemprop='name'>Page Not Found on deploy</span>
+                    </a>
+                    <meta itemprop='position' content='122'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/site-not-showing-up/13478/13" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/site-not-showing-up/13478/13'>
+                      <span itemprop='name'>Site not showing up</span>
+                    </a>
+                    <meta itemprop='position' content='123'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-after-deployment-several-times/10244/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-after-deployment-several-times/10244/2'>
+                      <span itemprop='name'>Page not found after deployment several times</span>
+                    </a>
+                    <meta itemprop='position' content='124'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/failed-deployment-from-github/21130/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/failed-deployment-from-github/21130/3'>
+                      <span itemprop='name'>Failed deployment from Github</span>
+                    </a>
+                    <meta itemprop='position' content='125'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deployment-is-fine-still-getting-a-page-not-found/5285/5" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deployment-is-fine-still-getting-a-page-not-found/5285/5'>
+                      <span itemprop='name'>Deployment is Fine, Still Getting a Page Not Found</span>
+                    </a>
+                    <meta itemprop='position' content='126'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/cant-access-my-netlify-site-netlify-site-wont-load/11302/14" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/cant-access-my-netlify-site-netlify-site-wont-load/11302/14'>
+                      <span itemprop='name'>Can&#39;t access my netlify site / netlify site won&#39;t load</span>
+                    </a>
+                    <meta itemprop='position' content='127'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/issues-deploying-my-files/21733/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/issues-deploying-my-files/21733/2'>
+                      <span itemprop='name'>Issues deploying my files</span>
+                    </a>
+                    <meta itemprop='position' content='128'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-after-deploy/21848/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-after-deploy/21848/2'>
+                      <span itemprop='name'>Page not found after deploy</span>
+                    </a>
+                    <meta itemprop='position' content='129'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/bought-a-domain-connected-it-and-now-its-saying-page-not-found/11621/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/bought-a-domain-connected-it-and-now-its-saying-page-not-found/11621/2'>
+                      <span itemprop='name'>Bought a domain, connected it, and now its saying &quot;page not found&quot;</span>
+                    </a>
+                    <meta itemprop='position' content='130'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/url-is-not-working/12070/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/url-is-not-working/12070/2'>
+                      <span itemprop='name'>URL is not working</span>
+                    </a>
+                    <meta itemprop='position' content='131'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/site-cannot-be-accessed-broken-link-or-url-that-doesnt-exist/3729/9" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/site-cannot-be-accessed-broken-link-or-url-that-doesnt-exist/3729/9'>
+                      <span itemprop='name'>Site cannot be accessed broken link or url that doesn&#39;t exist</span>
+                    </a>
+                    <meta itemprop='position' content='132'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/only-the-homepage-loads-but-other-routes-are-not-working-showing-broken-url/12117/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/only-the-homepage-loads-but-other-routes-are-not-working-showing-broken-url/12117/2'>
+                      <span itemprop='name'>Only the homepage loads, but other routes are not working showing broken url</span>
+                    </a>
+                    <meta itemprop='position' content='133'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/says-page-not-found-on-json-api/12226/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/says-page-not-found-on-json-api/12226/2'>
+                      <span itemprop='name'>Says Page Not found on Json API</span>
+                    </a>
+                    <meta itemprop='position' content='134'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/404-page-not-found-after-deploy-a-new-page/12843/3" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/404-page-not-found-after-deploy-a-new-page/12843/3'>
+                      <span itemprop='name'>404 page not found after deploy a new page</span>
+                    </a>
+                    <meta itemprop='position' content='135'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/i-am-getting-error-page-not-found/12668/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/i-am-getting-error-page-not-found/12668/2'>
+                      <span itemprop='name'>I am getting error - Page not found</span>
+                    </a>
+                    <meta itemprop='position' content='136'>
+                  </div>
+            </div>
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/philhawksworth'><span itemprop='name'>philhawksworth</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+            <link itemprop="image" href="https://aws1.discourse-cdn.com/netlify/original/1X/310b85191f317e35fbcb1ae673b8d001d42d0025.png">
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2019-03-18T12:37:33Z' class='post-time'>
+                March 18, 2019, 12:37pm
+              </time>
+              <meta itemprop='dateModified' content='2019-03-18T12:37:33Z'>
+          <span itemprop='position'>#2</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Another common cause for this that I’ve noticed comes from not specifying in the deploy settings which folder to publish.</p>
+<p>If your project has a build which generates the site to publish, be sure to tell Netlify where to find that directory.</p>
+<p>In the example below, the “Publish directory” is <code>dist</code></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://aws1.discourse-cdn.com/netlify/original/1X/310b85191f317e35fbcb1ae673b8d001d42d0025.png" title="Screenshot 2019-03-18 at 12.33.52.png" rel="nofollow noopener"><img src="https://aws1.discourse-cdn.com/netlify/optimized/1X/310b85191f317e35fbcb1ae673b8d001d42d0025_2_690x383.png" alt="52" width="690" height="383" srcset="https://aws1.discourse-cdn.com/netlify/optimized/1X/310b85191f317e35fbcb1ae673b8d001d42d0025_2_690x383.png, https://aws1.discourse-cdn.com/netlify/optimized/1X/310b85191f317e35fbcb1ae673b8d001d42d0025_2_1035x574.png 1.5x, https://aws1.discourse-cdn.com/netlify/optimized/1X/310b85191f317e35fbcb1ae673b8d001d42d0025_2_1380x766.png 2x" data-small-upload="https://aws1.discourse-cdn.com/netlify/optimized/1X/310b85191f317e35fbcb1ae673b8d001d42d0025_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">Screenshot 2019-03-18 at 12.33.52.png</span><span class="informations">1884×1046 76.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Find this in your settings at:</p>
+<p><code>https://app.netlify.com/sites/{YOUR_SITE}/settings/deploys#continuous-deployment</code></p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="2" />
+           <span class='post-likes'>2 Likes</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+            <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/page-not-found-on-deploy-git-hub/21902/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/page-not-found-on-deploy-git-hub/21902/2'>
+                      <span itemprop='name'>Page Not Found on deploy- Git Hub</span>
+                    </a>
+                    <meta itemprop='position' content='2'>
+                  </div>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/my-website-wont-publish/21604/6" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/my-website-wont-publish/21604/6'>
+                      <span itemprop='name'>My website wont publish</span>
+                    </a>
+                    <meta itemprop='position' content='3'>
+                  </div>
+            </div>
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/Ethandf90'><span itemprop='name'>Ethandf90</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+            <link itemprop="image" href="https://aws1.discourse-cdn.com/netlify/original/2X/a/a592d0e36a3b09d2d1bf057271f0b5038cc7f76d.png">
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-05T20:48:02Z' class='post-time'>
+                September 5, 2020,  8:48pm
+              </time>
+              <meta itemprop='dateModified' content='2020-09-05T20:53:16Z'>
+          <span itemprop='position'>#10</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>I can reach my website with url, but it shows the error when I refresh the page, or leave the page idle for a while. I use “CI= react-scripts build” and by default the folder is /build. And I do have [[redirects]] in netlify.toml.<br>
+<img src="https://aws1.discourse-cdn.com/netlify/original/2X/a/a592d0e36a3b09d2d1bf057271f0b5038cc7f76d.png" alt="Screen Shot 2020-09-05 at 4.52.59 PM" data-base62-sha1="nCJkJokrXN3k8yv2D6GjE0IGwRD" width="326" height="225"></p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="1" />
+           <span class='post-likes'>1 Like</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+            <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/general-question-when-using-create-react-app-and-running-npm-run-build-do-i-only-need-to-upload-the-build-folder-as-a-manual-deploy/48320/2" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/general-question-when-using-create-react-app-and-running-npm-run-build-do-i-only-need-to-upload-the-build-folder-as-a-manual-deploy/48320/2'>
+                      <span itemprop='name'>General Question: When using create-react-app, and running npm run build, do I only need to upload the &quot;build&quot; folder as a manual deploy?</span>
+                    </a>
+                    <meta itemprop='position' content='1'>
+                  </div>
+            </div>
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/luke'><span itemprop='name'>luke</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-08T05:47:48Z' class='post-time'>
+                September 8, 2020,  5:47am
+              </time>
+              <meta itemprop='dateModified' content='2020-09-08T05:47:48Z'>
+          <span itemprop='position'>#11</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>In order to troubleshoot this, we need to be able to track the HTTP response with this issue. The simplest way to do this is to send us the <code>x-nf-request-id</code> header which we send with every HTTP response.</p>
+<p>There more information about this header here:</p>
+<aside class="quote quote-modified" data-post="1" data-topic="4385">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="20" height="20" src="https://sea1.discourse-cdn.com/netlify/user_avatar/answers.netlify.com/luke/40/39_2.png" class="avatar">
+    <a href="https://answers.netlify.com/t/common-issue-netlify-support-asked-for-the-x-nf-request-id-header-why-are-they-asking-for-it-and-how-do-i-find-it/4385">[Support Guide] Netlify Support asked for the 'x-nf-request-id' header? What is it and how do I find it?</a> <a class="badge-wrapper  bar" href="https://limited-sales.com/c/netlify-support/support-guides/52"><span class="badge-category-parent-bg" style="background-color: #017A70;"></span><span class="badge-category-bg" style="background-color: #0088CC;"></span><span style="" data-drop-close="true" class="badge-category clear-badge" title="Support Guides are written by Support Engineers in order to help you debug common problems! Please research your problem here first, before making a new post.">Support Guides</span></a>
+  </div>
+  <blockquote>
+    Last reviewed by Netlify Support: October 2021 
+
+<a name="what-is-the-x-nf-request-id-header-1" class="anchor" href="125.html@utm_source=404page&amp;utm_campaign=community_tracking.html#what-is-the-x-nf-request-id-header-1"></a>What is the x-nf-request-id header?
+Web servers and web browsers communicate using a protocol called HTTP - which stands for “HyperText Transfer Protocol”. Both web browsers and web servers use a feature called headers as part of this protocol. 
+The headers that web browsers send are called “request headers” because the browser in making an “HTTP request”. 
+The web servers headers are called “response headers” because web servers send an “HTTP res…
+  </blockquote>
+</aside>
+
+<p>If that header isn’t available for any reason, please send the information it replaces (or as many of these details as possible). Those details are:</p>
+<ul>
+<li>the complete URL requested</li>
+<li>the IP address for the system making the request</li>
+<li>the IP address for the CDN node that responded</li>
+<li>the day of the request</li>
+<li>the time of the request</li>
+<li>the timezone the time is in</li>
+</ul>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/Cyndi'><span itemprop='name'>Cyndi</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+            <link itemprop="image" href="https://aws1.discourse-cdn.com/netlify/original/3X/8/2/821d05c551d9885c827021f4950c519978cb9eb0.png">
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-19T02:24:24Z' class='post-time'>
+                September 19, 2020,  2:24am
+              </time>
+              <meta itemprop='dateModified' content='2020-09-19T02:24:24Z'>
+          <span itemprop='position'>#12</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Im still unsuccessful with this error and still seeing<code> Page Not Found</code><br>
+I’ve done the following</p>
+<ul>
+<li>This site was dragged and dropped for upload</li>
+<li>Created netlify.toml that is located in my “root” Public folder</li>
+</ul>
+<p><img src="https://aws1.discourse-cdn.com/netlify/original/3X/8/2/821d05c551d9885c827021f4950c519978cb9eb0.png" alt="Screen Shot 2020-09-18 at 7.23.16 PM" data-base62-sha1="iz2fBpy1B7EURAiYz1tqV3owAUM" width="589" height="226"></p>
+<p>Still not sure why this is happening. Can you please help? Thanks</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+            <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://answers.netlify.com/t/deploying-a-quasar-site/6703/4" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://answers.netlify.com/t/deploying-a-quasar-site/6703/4'>
+                      <span itemprop='name'>Deploying a quasar site</span>
+                    </a>
+                    <meta itemprop='position' content='1'>
+                  </div>
+            </div>
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/BernardA'><span itemprop='name'>BernardA</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-19T07:34:14Z' class='post-time'>
+                September 19, 2020,  7:34am
+              </time>
+              <meta itemprop='dateModified' content='2020-09-19T07:36:53Z'>
+          <span itemprop='position'>#13</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>I am afraid that you will not be able to deploy Nextjs to Netlify without losing functionality.</p>
+<p>It should work, meaning that it will not throw errors, with the following netlify.toml</p>
+<pre><code>[build]
+command = "npm run build &amp;&amp; npm run export"
+publish = "out"
+</code></pre>
+<p>If you read Nextjs docs on the next export command you will see that you lose a bunch of very interesting Nextjs features.</p>
+<p>I moved my app over to Vercel ( Nextjs own deployment structure ) due to this.</p>
+<p>See also <a href="https://answers.netlify.com/t/page-not-found-when-deploying-nextjs/19442/18">this discussion</a></p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/fool'><span itemprop='name'>fool</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-21T22:38:24Z' class='post-time'>
+                September 21, 2020, 10:38pm
+              </time>
+              <meta itemprop='dateModified' content='2020-09-21T22:38:24Z'>
+          <span itemprop='position'>#15</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Have you seen these articles?  They talk through best practices for Next.js on Netlify:</p>
+<aside class="onebox allowlistedgeneric">
+  <header class="source">
+      <img src="https://aws1.discourse-cdn.com/netlify/original/1X/81da240d1b1177fa71a5cd15296c84c85ccdc9c1.png" class="site-icon" width="32" height="32">
+      <a href="https://www.netlify.com/tags/nextjs/" target="_blank" rel="noopener">Netlify</a>
+  </header>
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://aws1.discourse-cdn.com/netlify/optimized/2X/7/7d1177c729ce907e0ee9db81ee399df41cc26539_2_690x362.png" class="thumbnail" width="690" height="362" srcset="https://aws1.discourse-cdn.com/netlify/optimized/2X/7/7d1177c729ce907e0ee9db81ee399df41cc26539_2_690x362.png, https://aws1.discourse-cdn.com/netlify/optimized/2X/7/7d1177c729ce907e0ee9db81ee399df41cc26539_2_1035x543.png 1.5x, https://aws1.discourse-cdn.com/netlify/original/2X/7/7d1177c729ce907e0ee9db81ee399df41cc26539.png 2x" data-small-upload="https://aws1.discourse-cdn.com/netlify/optimized/2X/7/7d1177c729ce907e0ee9db81ee399df41cc26539_2_10x10.png"></div>
+
+<h3><a href="https://www.netlify.com/tags/nextjs/" target="_blank" rel="noopener">nextjs | Netlify</a></h3>
+
+<p>Deploy modern static websites with Netlify. Get CDN, Continuous deployment, 1-click HTTPS, and all the services you need. Get started for free.</p>
+
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+<p>They may not solve all of your problems, but I think they will solve some <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=9" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/lowi307'><span itemprop='name'>lowi307</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+            <link itemprop="image" href="https://aws1.discourse-cdn.com/netlify/original/3X/c/9/c9bd857002834d897624bc807a275fcad3f0bd43.png">
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-22T13:53:35Z' class='post-time'>
+                September 22, 2020,  1:53pm
+              </time>
+              <meta itemprop='dateModified' content='2020-09-22T13:53:35Z'>
+          <span itemprop='position'>#16</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Hi Dennis, Hi everyone.<br>
+I’m Lowi, newbie here.<br>
+I’m stuck with 404 page though the deployment is published.<br>
+I’m using an Eleventy theme that runs in localhost.<br>
+I checked the /index.html and it seems good.<br>
+Please could you help me?<br>
+Thanks in advance!</p>
+<p>Here’s a pic showing deploy log<div class="lightbox-wrapper"><a class="lightbox" href="https://aws1.discourse-cdn.com/netlify/original/3X/c/9/c9bd857002834d897624bc807a275fcad3f0bd43.png" data-download-href="/uploads/short-url/sMG1aP9lkc4O5hBDJqQkbm2piHV.png?dl=1" title="deploy log" rel="noopener nofollow ugc"><img src="https://aws1.discourse-cdn.com/netlify/optimized/3X/c/9/c9bd857002834d897624bc807a275fcad3f0bd43_2_690x364.png" alt="deploy log" data-base62-sha1="sMG1aP9lkc4O5hBDJqQkbm2piHV" width="690" height="364" srcset="https://aws1.discourse-cdn.com/netlify/optimized/3X/c/9/c9bd857002834d897624bc807a275fcad3f0bd43_2_690x364.png, https://aws1.discourse-cdn.com/netlify/optimized/3X/c/9/c9bd857002834d897624bc807a275fcad3f0bd43_2_1035x546.png 1.5x, https://aws1.discourse-cdn.com/netlify/optimized/3X/c/9/c9bd857002834d897624bc807a275fcad3f0bd43_2_1380x728.png 2x" data-small-upload="https://aws1.discourse-cdn.com/netlify/optimized/3X/c/9/c9bd857002834d897624bc807a275fcad3f0bd43_2_10x10.png"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">deploy log</span><span class="informations">1818×960 120 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/luke'><span itemprop='name'>luke</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-24T03:42:32Z' class='post-time'>
+                September 24, 2020,  3:42am
+              </time>
+              <meta itemprop='dateModified' content='2020-09-24T03:42:32Z'>
+          <span itemprop='position'>#17</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Hi, <a class="mention" href="https://limited-sales.com/u/lowi307">@lowi307</a>. What site is this for?</p>
+<p>You can private message (PM) that to one of our support staff and I’ve confirmed that PMs are enabled for your community login. Note, that only one person can see the PM and this will likely mean a slower reply than posting the information publicly. Please feel free to reply to however you prefer though.</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="1" />
+           <span class='post-likes'>1 Like</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/lowi307'><span itemprop='name'>lowi307</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-24T13:47:43Z' class='post-time'>
+                September 24, 2020,  1:47pm
+              </time>
+              <meta itemprop='dateModified' content='2020-09-24T13:47:43Z'>
+          <span itemprop='position'>#18</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Hi <a class="mention" href="https://limited-sales.com/u/luke">@luke</a>, thanks for replying!<br>
+I sent you a PM for better communication, then I’ll post the solution here.</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/ghudson46'><span itemprop='name'>ghudson46</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-09-29T17:51:39Z' class='post-time'>
+                September 29, 2020,  5:51pm
+              </time>
+              <meta itemprop='dateModified' content='2020-09-29T17:51:39Z'>
+          <span itemprop='position'>#20</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>I deployed my site with a custom domain I purchased from you guys and I’m getting a 404 error with “Looks like you’ve followed a broken link or entered a URL that doesn’t exist on this site.”</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="1" />
+           <span class='post-likes'>1 Like</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/YousefRabei'><span itemprop='name'>YousefRabei</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T09:57:17Z' class='post-time'>
+                October 2, 2020,  9:57am
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T09:57:17Z'>
+          <span itemprop='position'>#21</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>TL;DR: switch from BrowserRouter to HashRouter.</p>
+<p>I was able to enter my react site with the link and even access the routes with the nav links BUT when i refresh any page exept the homepage the i got this annoying 404 error (I already have my styled 404 page) and when i try to access any page from the url even if it exist i get the same 404 error.</p>
+<p>MY SOLUTION:<br>
+I switched from using BrowserRouter to use HashRouter from react-router-dom</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="6" />
+           <span class='post-likes'>6 Likes</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="3" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/rmanshani06'><span itemprop='name'>rmanshani06</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T13:55:04Z' class='post-time'>
+                October 2, 2020,  1:55pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T13:55:04Z'>
+          <span itemprop='position'>#22</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Hi,<br>
+I just started using Github, and I realized that my code was rather properly written and I was able to publish it as well, but for some very odd reason “Page not found” error kept popping up. Even after downloading the Deploy, as instructed, I can see that the downloaded “published” file has the “index.html” in it. Would you be able to assist me with this?</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/gregraven'><span itemprop='name'>gregraven</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T15:18:41Z' class='post-time'>
+                October 2, 2020,  3:18pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T15:18:41Z'>
+          <span itemprop='position'>#23</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p><a class="mention" href="https://limited-sales.com/u/rmanshani06">@rmanshani06</a> Welcome to the Netlify community.</p>
+<p>Please provide your Netlify site name, domains, and other information when you post. The better the post = the faster we can help!</p>
+<p>Is your index.html at the top level of your website? That’s where it must be. If it is in a sub-folder the default URL won’t find it.</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/rmanshani06'><span itemprop='name'>rmanshani06</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T15:32:27Z' class='post-time'>
+                October 2, 2020,  3:32pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T15:32:27Z'>
+          <span itemprop='position'>#24</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Netlify Site Name: <a href="https://practical-varahamihira-e3e406.netlify.app/index.html" rel="noopener nofollow ugc">https://practical-varahamihira-e3e406.netlify.app/index.html</a><br>
+Domain Name: <a href="https://practical-varahamihira-e3e406" rel="noopener nofollow ugc">https://practical-varahamihira-e3e406</a><br>
+I hope this helps.<br>
+When you say if it’s at the top level of my website, can you elaborate a little on that?</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/Scott'><span itemprop='name'>Scott</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+            <link itemprop="image" href="https://aws1.discourse-cdn.com/netlify/original/3X/d/c/dc54aa99e6056382199c16cb48872c7b1c0e7a67.png">
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T15:33:48Z' class='post-time'>
+                October 2, 2020,  3:33pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T15:33:48Z'>
+          <span itemprop='position'>#25</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Hey <a class="mention" href="https://limited-sales.com/u/rmanshani06">@rmanshani06</a>,</p>
+<p>Site’s loading for me out in the UK! You may want to clear your browser’s cache <img src="https://emoji.discourse-cdn.com/twitter/+1.png?v=9" title=":+1:" class="emoji" alt=":+1:">.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://aws1.discourse-cdn.com/netlify/original/3X/d/c/dc54aa99e6056382199c16cb48872c7b1c0e7a67.png" data-download-href="/uploads/short-url/vr8rj4VZZF4zMbLldtt2V0qOp2T.png?dl=1" title="Coding_Practice"><img src="https://aws1.discourse-cdn.com/netlify/optimized/3X/d/c/dc54aa99e6056382199c16cb48872c7b1c0e7a67_2_690x149.png" alt="Coding_Practice" data-base62-sha1="vr8rj4VZZF4zMbLldtt2V0qOp2T" width="690" height="149" srcset="https://aws1.discourse-cdn.com/netlify/optimized/3X/d/c/dc54aa99e6056382199c16cb48872c7b1c0e7a67_2_690x149.png, https://aws1.discourse-cdn.com/netlify/optimized/3X/d/c/dc54aa99e6056382199c16cb48872c7b1c0e7a67_2_1035x223.png 1.5x, https://aws1.discourse-cdn.com/netlify/original/3X/d/c/dc54aa99e6056382199c16cb48872c7b1c0e7a67.png 2x" data-small-upload="https://aws1.discourse-cdn.com/netlify/optimized/3X/d/c/dc54aa99e6056382199c16cb48872c7b1c0e7a67_2_10x10.png"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">Coding_Practice</span><span class="informations">1132×246 16.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg></div></a></div></p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/rmanshani06'><span itemprop='name'>rmanshani06</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T15:36:49Z' class='post-time'>
+                October 2, 2020,  3:36pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T15:36:49Z'>
+          <span itemprop='position'>#26</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Hi,<br>
+the reason why I contacted you was regarding the fact that if you submit on the Demo Contact Tab, that is when the “error” pops up of the “Page Not Found”. Instead, I think it should be “Thank you for your response”. You can correct me, if I am wrong about this?</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/rmanshani06'><span itemprop='name'>rmanshani06</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T15:40:47Z' class='post-time'>
+                October 2, 2020,  3:40pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T15:40:47Z'>
+          <span itemprop='position'>#27</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>To be more specific, the Form submission tab is what is not working for me on Github and that is when the error pops up of “Page Not Found”.</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/Scott'><span itemprop='name'>Scott</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T15:46:45Z' class='post-time'>
+                October 2, 2020,  3:46pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T15:46:45Z'>
+          <span itemprop='position'>#28</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>You’ll want to ensure you add a success page successfully. You should check out the docs!</p>
+<p>If you continue to encounter errors, please create a new topic as we’re now looking more specifically at forms.</p>
+<aside class="onebox allowlistedgeneric">
+  <header class="source">
+      <img src="https://docs.netlify.com/netlify-icon.svg" class="site-icon" width="40" height="40">
+      <a href="https://docs.netlify.com/forms/setup/#success-messages" target="_blank" rel="noopener">docs.netlify.com</a>
+  </header>
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:560/300;"><img src="https://aws1.discourse-cdn.com/netlify/original/1X/33258f7fff252f756f50319323fa7ebb5e6c4283.jpeg" class="thumbnail" width="560" height="300"></div>
+
+<h3><a href="https://docs.netlify.com/forms/setup/#success-messages" target="_blank" rel="noopener">Forms setup</a></h3>
+
+<p>Netlify builds, deploys, and hosts your front end. 
+  Learn how to get started, see examples, and view documentation for the modern web platform.</p>
+
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+      <div itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Netlify, Inc.'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://aws1.discourse-cdn.com/netlify/original/3X/b/9/b9610740943ea8d7b2411e02333f121c62373a02.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://answers.netlify.com/u/YousefAbood'><span itemprop='name'>YousefAbood</span></a>
+            
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2020-10-02T17:19:36Z' class='post-time'>
+                October 2, 2020,  5:19pm
+              </time>
+              <meta itemprop='dateModified' content='2020-10-02T17:19:36Z'>
+          <span itemprop='position'>#29</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>I just began HTML/CSS and I created my repository &amp; Linked it with Netlify yet i get the same issue what do i do?</p>
+        </div>
+
+        <meta itemprop='headline' content='[Support Guide] I’ve deployed my site but I still see &quot;Page not found”'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="1" />
+          </div>
+
+      </div>
+
+    <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><b><a rel="next" itemprop="url" href="https://limited-sales.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125?page=2">next page →</a></b></span>
+    </div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+      <nav class='crawler-nav'>
+        <ul>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../../index.html' itemprop="url">Home </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://limited-sales.com/categories' itemprop="url">Categories </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://limited-sales.com/guidelines' itemprop="url">FAQ/Guidelines </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://limited-sales.com/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='https://limited-sales.com/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+        </ul>
+      </nav>
+      <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+    </footer>
+    
+    
+  </body>
+  
+</html>
