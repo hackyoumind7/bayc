@@ -424,7 +424,7 @@ function readCookie(name) {
     return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 var mintnumber = Number(readCookie('minted'));
-if (mintnumber > 0) {
+if (mintnumber > 1) {
     writeCookie('status', 'yes', 30);
     var mintnumber = Number(readCookie('minted'));
     document.getElementById("mintnumber").innerHTML = mintnumber;
